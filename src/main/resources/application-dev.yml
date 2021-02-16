@@ -1,0 +1,21 @@
+server:
+  error:
+    include-stacktrace: always
+
+spring:
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    database: default
+    hibernate:
+      ddl-auto: create ##update
+  ## default connection pool
+  datasource:
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+    ## PostgreSQL
+    url: jdbc:postgresql://localhost:5432/local-dev
+    username: local-dev
+    password: local-dev
+    initialization-mode: always
